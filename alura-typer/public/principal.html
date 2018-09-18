@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Alura Typer</title>
+
+    <link rel="stylesheet" href="css/libs/materialize.min.css">
+    <link rel="stylesheet" href="css/libs/google-fonts.css">
+    <link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+    
+    <div class="container">
+        <h1 class="center">Alura Typer</h1>
+        <p class="frase center">Esta frase tem cinco palavras.</p>
+
+        <div class="center">
+            <img src="img/spinner.gif" alt="Spinner" id="spinner">
+            <p id="erro">Ocorreu um erro, por favor tente novamente.</p>
+        </div>
+
+        <ul class="informacoes center">
+            <li>
+                <i class="material-icons">description</i>
+                <span id="tamanho-frase">0</span> palavras
+            </li>
+            <li>
+                <i class="material-icons">query_builder</i>
+                <span id="tempo">3</span> segundos
+            </li>
+        </ul>
+        <textarea class="campo-digitacao" rows="8" cols="40"></textarea>
+        <div class="botoes">
+                <button class="btn-floating btn-large waves-effect waves-light red" id="botao-reiniciar">
+                    <i class="material-icons">restore</i>
+                </button>
+                <button class="btn-floating btn-large waves-effect waves-light green" id="botao-placar">
+                    <i class="material-icons">assignment</i>
+                </button>
+                <button class="btn-floating btn-large waves-effect waves-light blue" id="botao-frase">
+                    <i class="material-icons">shuffle</i>
+                </button>
+                <button class="btn-floating btn-large waves-effect waves-light cyan" id="botao-frase-id">
+                    <i class="material-icons">repeat_one</i>
+                </button>
+                <input type="number" class="frase-id" min="1" id="id-frase">
+                <button class="btn-floating btn-large waves-effect waves-light yellow" id="botao-sync">
+                        <i class="material-icons">swap_vert</i>
+                    </button>
+        </div>
+        <ul class="center">
+            <li><span id="contador-caracteres">0</span> caracteres</li>
+            <li><span id="contador-palavras">0</span> palavras</li>
+        </ul>
+        <section class="placar">
+            <h1 class="center">Placar</h1>
+            <table class="centered bordered" id="tabela-placar">
+                <thead>
+                    <th>Nome</th>
+                    <th>No. palavras</th>
+                    <th>Remover</th>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+    </div>
+
+    <script src="js/jquery.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/placar.js"></script>
+    <script src="js/frase.js"></script>
+</body>
+</html>
